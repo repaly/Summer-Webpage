@@ -13,22 +13,60 @@
 </head>
 
 <body>
+
   <header>
     <div class="main-header row align-items-center justify-content-center m-0">
       <div class="col-7 align-self-center">
         <h1>Эллинг 55 в Волконке</h1>
         <h5>Гостевой дом на берегу черного моря</h5>
         <div class="row align-self-center justify-content-between button-container">
-          <button type="button" class="btn btn-primary btn-bron ml-3">Забронировать</button>
-          <button type="button" class="btn btn-link btn-about-us">О нас</button>
+            <a href="#submit-form"><button type="button" class="btn btn-primary btn-bron ml-3">Забронировать</button></a>
+            <a href="#about-us"><button type="button" class="btn btn-link btn-about-us">О нас</button></a>
         </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <div class="row align-items-left mt-5">
-      <h3>Почему у нас <span>хорошо?</span></h3>
+      <!-- Modal window -->
+      <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <img class="rounded" data-u="image" src="img/apartaments.png" />
+                      <div class="description-room row">
+                          <div class="col-8">
+                              <h5>Аппартаменты с видом на море • от 1500р. за ночь</h5>
+                              <p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и кондиционером</p>
+                          </div>
+                          <div class="col-4 prices">
+                              <div class="row">
+                                  <div class="col-6">
+                                      Цена за <b>Июнь:</b> <br>
+                                      Июль: <br>
+                                      Август: <br>
+                                      Сентябрь: <br>
+                                      Октябрь: <br>
+                                      Ноябрь:
+                                  </div>
+                                  <div class="col-6">
+                                      <b>1500р/ночь</b><br>
+                                      800р/ночь<br>
+                                      20р/ночь<br>
+                                      1500р/ночь<br>
+                                      1500р/ночь<br>
+                                      1500р/ночь
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Modal window -->
+    <div class="row align-items-left mt-5" id="about-us">
+      <h3>Почему у нас <span class="paint">хорошо?</span></h3>
     </div>
     <section class="row mt-5 justify-content-between">
       <article class="col-3">
@@ -44,11 +82,152 @@
         <p>Здесь написать что-нибудь про комфортную и домашнюю атмосферу с шашлычком. Тут идет дополнительный текст, чтобы этот параграф визульно был похож на остальные два.</p>
       </article>
       <img class="rounded mx-auto d-block img-fluid mt-5" src="img/bedroom.png" alt="красивый вид на спальню">
-
+      <article class="col-5 align-self-center">
+        <h4>Все <span class="paint">удобства</span> у вас под рукой</h4>
+        <p class="text-left pr-5 mt-5">Скоростной WIFI прямо на берегу моря, манаг для сочного шашлыка, зонтики от солнца, пароварка, парковка</p>
+      </article>
+      <img class="rounded col-6 mt-5 px-0" src="img/wall.png" alt="гостинная">
     </section>
+    <section class="row mt-5">
+        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+            </div>
+            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+                <div data-p="225.00">
+                    <img data-u="image" src="img/001.jpg" />
+                </div>
+                <div data-p="225.00">
+                    <img data-u="image" src="img/002.jpg" />
+                </div>
+                <div data-p="225.00">
+                    <img data-u="image" src="img/003.jpg" />
+                </div>
+            </div>
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                    </svg>
+                </div>
+            </div>
+            <!-- Arrow Navigator -->
+            <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                </svg>
+            </div>
+            <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section class="row mt-5 justify-content-between">
+        <article class="col-6">
+            <h3>Как к нам попасть?</h3>
+            <p>
+                Удобнее всего добираться до нас на машине или электричке.
+                Вы также можете взять такси из п. Лазаревское, или добраться на автобусе.
+                <br><br>
+                • Если вы едете со стороны <strong>Сочи</strong>, вы можете добраться до нас на автобусе №12
+                или электричке, выйдя на остановке "Волконка"
+                <br><br>
+                • Если вы едете со стороны <strong>Туапсе</strong>, вам подойдет тот же автобус №12 или электричка
+                <br><br>
+                Перед поездкой на электричке лучше свериться с
+                <a href="http://krasnodar.elektrichki.net/raspisanie/volkonka/sochi/">расписанием остановок</a>
+            </p>
+        </article>
+        <div id="map" class="col-5 rounded"></div>
+    </section>
+      <section class="row mt-5">
+          <h3>Уютные комнаты за <span class="paint"> доступную цену</span></h3>
+          <div class="col-12 px-0 mt-5">
+              <div class="rounded" id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;visibility:hidden;">
+                  <!-- Loading Screen -->
+                  <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                      <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+                  </div>
+                  <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;">
+                      <div data-p="225.00">
+                          <img class="rounded" data-u="image" src="img/apartaments.png" />
+                          <div class="description-room">
+                              <button class="all-photos" data-toggle="modal" data-target="#exampleModal">Все фото</button>
+                              <h5>Аппартаменты с видом на море • от 1500р. за ночь</h5>
+                              <p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и кондиционером</p>
+                          </div>
+                      </div>
+                      <!--<div data-p="225.00">-->
+                          <!--<img data-u="image" src="img/002.jpg" />-->
+                      <!--</div>-->
+                      <!--<div data-p="225.00">-->
+                          <!--<img data-u="image" src="img/003.jpg" />-->
+                      <!--</div>-->
+                  </div>
+                  <!-- Arrow Navigator -->
+                  <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                      <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                          <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                      </svg>
+                  </div>
+                  <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                      <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                          <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="row mt-5 submit-form" id="submit-form">
+          <h3 class="col-12 px-0">Хотите к <span class="paint">нам?</span></h3>
+          <h4 class="mt-3">Оставьте свои данные и мы свяжемся с вами насчет брони в ближайшее время</h4>
+          <form class="col-12 mt-5 px-0" action="" method="post">
+              <input class="col-12" type="text" name="user_phone" placeholder="Ваш телефон">
+              <input class="col-12 mt-5" type="text" name="user_name" placeholder="Ваше имя">
+              <button class="mt-5" type="submit">Отправить</button>
+          </form>
+      </section>
   </main>
+  <footer>
+      <div class="container px-0 pt-5">
+          <div class="row">
+              <address class="col-8">
+                  <b>Почта</b><br>
+                  elling55@gmail.com <br><br>
+                  <b>Телефон</b><br>
+                  +7(928)226-88-11
+              </address>
+              <aside class="col-4 text-right">
+                  Мы на других ресурсах<br><br>
+                  <img src="img/instagram.svg" alt="логотип инстаграма">
+                  <img src="img/ug.svg" alt="логотип сервиса юг">
+                  <img src="img/booking.svg" alt="логотип букинга">
+                  <img src="img/airbnb.svg" alt="логотип эирбиэнби">
+              </aside>
+          </div>
+      </div>
+  </footer>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous">
+  </script>
+  <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous">
+
+  </script>
+  <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_YZyDFyQPSz-AxSRlB6EgtGl1qNANvt4&callback=initMap">
+  </script>
 </body>
 
 </html>

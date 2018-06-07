@@ -6,6 +6,7 @@
 .AppleDouble
 .LSOverride
 .tern-project
+.idea
 *.scssc
 *css.map
 main.css
@@ -35,3 +36,4 @@ Temporary Items
 
 
 # End of https://www.gitignore.io/api/macos
+with-jquery.html
