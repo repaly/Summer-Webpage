@@ -160,6 +160,22 @@ database.ref("/config").once('value').then(function (snap) {
     var airBnb = socialData.airBnb;
 });
 
+function sendFeedback(phone, name) {
+    database.ref("feedback").push().set({
+        "phone": phone,
+        "name": name,
+        "date": Date.now()
+    }, function (error) {
+        if (error) {
+            //TODO Handle in UI
+            console.log("Failed to send feedback")
+        } else {
+            //TODO Handle in UI
+            console.log("Feedback send successfully")
+        }
+    });
+}
+
 function initMap() {
     var uluru = {lat: 43.867267, lng: 39.386341};
     var map = new google.maps.Map(document.getElementById('map'), {
