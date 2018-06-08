@@ -1,10 +1,18 @@
 jQuery(document).ready(function ($) {
-
     var jssor_1_SlideoTransitions = [
-        [{b:-1,d:1,o:-0.7}],
-        [{b:900,d:2000,x:-379,e:{x:7}}],
-        [{b:900,d:2000,x:-379,e:{x:7}}],
-        [{b:-1,d:1,o:-1,sX:2,sY:2},{b:0,d:900,x:-171,y:-341,o:1,sX:-2,sY:-2,e:{x:3,y:3,sX:3,sY:3}},{b:900,d:1600,x:-283,o:-1,e:{x:16}}]
+        [{b: -1, d: 1, o: -0.7}],
+        [{b: 900, d: 2000, x: -379, e: {x: 7}}],
+        [{b: 900, d: 2000, x: -379, e: {x: 7}}],
+        [{b: -1, d: 1, o: -1, sX: 2, sY: 2}, {
+            b: 0,
+            d: 900,
+            x: -171,
+            y: -341,
+            o: 1,
+            sX: -2,
+            sY: -2,
+            e: {x: 3, y: 3, sX: 3, sY: 3}
+        }, {b: 900, d: 1600, x: -283, o: -1, e: {x: 16}}]
     ];
 
     var jssor_1_options = {
@@ -55,10 +63,19 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
 
     var jssor_2_SlideoTransitions = [
-        [{b:-1,d:1,o:-0.7}],
-        [{b:900,d:2000,x:-379,e:{x:7}}],
-        [{b:900,d:2000,x:-379,e:{x:7}}],
-        [{b:-1,d:1,o:-1,sX:2,sY:2},{b:0,d:900,x:-171,y:-341,o:1,sX:-2,sY:-2,e:{x:3,y:3,sX:3,sY:3}},{b:900,d:1600,x:-283,o:-1,e:{x:16}}]
+        [{b: -1, d: 1, o: -0.7}],
+        [{b: 900, d: 2000, x: -379, e: {x: 7}}],
+        [{b: 900, d: 2000, x: -379, e: {x: 7}}],
+        [{b: -1, d: 1, o: -1, sX: 2, sY: 2}, {
+            b: 0,
+            d: 900,
+            x: -171,
+            y: -341,
+            o: 1,
+            sX: -2,
+            sY: -2,
+            e: {x: 3, y: 3, sX: 3, sY: 3}
+        }, {b: 900, d: 1600, x: -283, o: -1, e: {x: 16}}]
     ];
 
     var jssor_2_options = {
@@ -104,6 +121,43 @@ jQuery(document).ready(function ($) {
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
     /*#endregion responsive code end*/
+});
+
+var config = {
+    apiKey: "AIzaSyDz7vYnW7BaiYuIh2dB3tvtzDNC6GFQDJQ",
+    authDomain: "volkonka-elling55.firebaseapp.com",
+    databaseURL: "https://volkonka-elling55.firebaseio.com",
+    projectId: "volkonka-elling55",
+    storageBucket: "volkonka-elling55.appspot.com",
+    messagingSenderId: "901445025885"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+
+database.ref('/rooms').once('value').then(function (snapshot) {
+    var rooms = [];
+    snapshot.forEach(function (childSnapShot) {
+        rooms.push(childSnapShot.val());
+    });
+    console.log(rooms);
+});
+
+database.ref("/config").once('value').then(function (snap) {
+    const contactsData = snap.val().contacts;
+    const socialData = snap.val().social;
+    var phone = contactsData.phone;
+    var email = contactsData.email;
+
+    var instagram = socialData.instagram;
+    /*
+     {
+     "enabled" : true,
+     "url" : "https://www.booking.com/"
+     }
+     */
+    var booking = socialData.booking;
+    var naYuga = socialData.naYuga;
+    var airBnb = socialData.airBnb;
 });
 
 function initMap() {
