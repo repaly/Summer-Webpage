@@ -7,8 +7,10 @@
 .LSOverride
 .tern-project
 .idea
-
-
+*.scssc
+*css.map
+main.css
+normalize.css
 
 # Icon must end with two \r
 Icon
