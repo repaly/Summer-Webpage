@@ -1,6 +1,52 @@
 * {
   font-family: Avenir Next; }
 
+@media screen and (max-width: 769px) {
+  .row {
+    margin-left: 0px !important; }
+
+  .main-header h1 {
+    font-size: 36px !important; }
+  .main-header h5 {
+    font-size: 18px !important; }
+  .main-header #button-bron {
+    position: absolute;
+    display: block;
+    width: 90%;
+    top: 300px; }
+  .main-header #button-about-us {
+    display: none; }
+
+  main section article {
+    margin-top: 2rem;
+    padding: 0 !important; } }
+@media screen and (max-width: 769px) and (max-width: 426px) {
+  main h3 {
+    font-size: 36px !important; }
+  main .bedroom-img {
+    height: 200px;
+    width: 100%; }
+  main #map {
+    min-height: 600px; }
+  main .such-rooms {
+    font-size: 24px !important; }
+  main .submit-form h3 {
+    font-size: 24px !important; }
+  main .submit-form h4, main .submit-form button, main .submit-form input {
+    font-size: 18px !important; }
+  main .submit-form button {
+    padding: 17px 50px !important; } }
+
+@media screen and (max-width: 769px) and (max-width: 426px) {
+  footer .row {
+    margin: 0 !important; }
+  footer aside {
+    margin-top: 20px;
+    font-weight: 600; }
+    footer aside img {
+      width: 64px !important;
+      height: 64px !important;
+      margin-bottom: 20px; } }
 .main-header {
   width: auto;
   max-width: 100%;
@@ -50,8 +96,9 @@ main section h6 {
   font-size: 24px; }
 main section p {
   font-size: 18px; }
-main section article:first-child {
-  padding-left: 0; }
+@media screen and (min-width: 769px) {
+  main section article:first-child {
+    padding-left: 0; } }
 main .description-room {
   color: #fff;
   background: linear-gradient(180deg, #01838A 0%, #007399 100%);
@@ -75,6 +122,8 @@ main .description-room {
     -moz-border-radius: 5px;
     border-radius: 5px;
     cursor: pointer; }
+main .position-static {
+  position: static; }
 main .submit-form h4 {
   font-weight: 400; }
 main .submit-form input {
@@ -117,31 +166,56 @@ footer {
     margin-bottom: 0; }
     footer address b {
       font-weight: 600; }
+  footer aside {
+    padding-right: 0; }
 
-.modal-lg {
-  max-width: 80% !important; }
-  .modal-lg .modal-body {
-    padding: 0 !important; }
-    .modal-lg .modal-body .row {
-      margin-right: 0 !important;
-      margin-left: 0 !important;
-      display: flex !important; }
-    .modal-lg .modal-body img {
-      width: 100%; }
-    .modal-lg .modal-body .description-room {
-      padding: 16px;
-      height: 30%;
-      color: #000;
-      background: #fff;
-      -webkit-border-radius: 0 0 4px 4px;
-      -moz-border-radius: 0 0 4px 4px;
-      border-radius: 0 0 4px 4px; }
-      .modal-lg .modal-body .description-room p {
-        font-size: 20px; }
+.modal-dialog {
+  max-width: 90% !important; }
+
+.modal-lg .modal-body {
+  padding: 0 !important; }
+  .modal-lg .modal-body .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: flex !important; }
+  .modal-lg .modal-body img {
+    width: 100%; }
+  .modal-lg .modal-body .description-room {
+    padding: 16px;
+    height: 30%;
+    color: #000;
+    background: #fff;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px; }
+    .modal-lg .modal-body .description-room p {
+      font-size: 20px; }
+  .modal-lg .modal-body .prices {
+    padding: 10px;
+    border-left: 1px solid #007399; }
+  .modal-lg .modal-body button {
+    background: #007399;
+    color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+  @media screen and (max-width: 769px) {
+    .modal-lg .modal-body .description-room h5 {
+      font-size: 20px; }
+    .modal-lg .modal-body .description-room p {
+      font-size: 14px; }
     .modal-lg .modal-body .prices {
-      padding: 10px;
-      border-left: 1px solid #007399; }
+      font-size: 14px; } }
 
+@media screen and (max-width: 426px) {
+  .modal-lg {
+    min-width: 100% !important; }
+    .modal-lg .prices {
+      border: 0 !important; }
+
+  .modal-dialog {
+    margin: 0 !important; }
+
+  .modal-dialog-centered {
+    display: block !important; } }
 /* JS SLIDER */
 /*jssor slider loading skin spin css*/
 .jssorl-009-spin img {

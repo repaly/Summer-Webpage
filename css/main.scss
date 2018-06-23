@@ -6,6 +6,85 @@ $third-color: #007399;
   font-family: Avenir Next;
 }
 
+@media screen and (max-width: 769px) {
+  .row {
+    margin-left: 0px !important;
+  }
+  .main-header {
+    h1 {
+      font-size: 36px !important;
+    }
+    h5 {
+      font-size: 18px !important;
+    }
+    #button-bron {
+      position: absolute;
+      display: block;
+      width: 90%;
+      top: 300px;
+    }
+    #button-about-us {
+      display: none;
+    }
+  }
+
+  main {
+    section {
+      article {
+        margin-top: 2rem;
+        padding: 0 !important;
+      }
+    }
+    @media screen and (max-width: 426px) {
+      h3 {
+        font-size: 36px !important;
+      }
+      .bedroom-img {
+        height: 200px;
+        width: 100%;
+      }
+      #map {
+        min-height: 600px;
+      }
+      .such-rooms {
+        font-size: 24px !important;
+      }
+      .submit-form {
+        h3 {
+          font-size: 24px !important;
+        }
+        h4, button, input {
+          font-size: 18px !important;
+        }
+        button {
+          padding: 17px 50px !important;
+        }
+      }
+
+    }
+
+
+  }
+  @media screen and (max-width: 426px) {
+
+    footer {
+      .row {
+        margin: 0 !important;
+      }
+      aside {
+        margin-top: 20px;
+        font-weight: 600;
+        img {
+          width: 64px !important;
+          height: 64px !important;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+}
+
 .main-header {
   width: auto;
   max-width: 100%;
@@ -71,10 +150,14 @@ main {
     p {
       font-size: 18px;
     }
-    article:first-child {
-      padding-left: 0;
+    @media screen and (min-width: 769px) {
+      article:first-child {
+        padding-left: 0;
+      }
     }
+
   }
+
   .description-room {
     color: #fff;
     background: linear-gradient(180deg, #01838A 0%, #007399 100%);
@@ -102,6 +185,11 @@ main {
       cursor: pointer;
     }
   }
+
+  .position-static {
+    position: static;
+  }
+
   .submit-form {
     h4 {
       font-weight: 400;
@@ -157,10 +245,16 @@ footer {
       font-weight: 600;
     }
   }
+  aside {
+    padding-right: 0;
+  }
+}
+
+.modal-dialog {
+  max-width: 90% !important;
 }
 
 .modal-lg {
-  max-width: 80% !important;
   .modal-body {
     padding: 0 !important;
     .row {
@@ -187,9 +281,45 @@ footer {
       padding: 10px;
       border-left: 1px solid #007399;
     }
+
+    button {
+      background: $third-color;
+      color: #fff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (max-width: 769px) {
+      .description-room {
+        h5 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .prices {
+        font-size: 14px;
+      }
+    }
   }
 }
 
+@media screen and (max-width: 426px) {
+  .modal-lg {
+    min-width: 100% !important;
+    .prices {
+      border: 0 !important;
+    }
+  }
+
+  .modal-dialog {
+    margin: 0 !important;
+  }
+
+  .modal-dialog-centered {
+    display: block !important;
+  }
+}
 
 /* JS SLIDER */
 /*jssor slider loading skin spin css*/

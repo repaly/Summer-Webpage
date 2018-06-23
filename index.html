@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <title>Эллинг 55</title>
     <meta name="description" content="Гостевой дом на берегу черного моря">
     <link rel="stylesheet" href="css/normalize.css">
@@ -11,22 +11,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-
 </head>
 
 <body>
 
 <header>
     <div class="main-header row align-items-center justify-content-center m-0">
-        <div class="col-7 align-self-center">
+        <div class="col-12 col-sm-7 align-self-center">
             <h1>Эллинг 55 в Волконке</h1>
             <h5>Гостевой дом на берегу черного моря</h5>
             <div class="row align-self-center justify-content-between button-container">
                 <a href="#submit-form">
-                    <button type="button" class="btn btn-primary btn-bron ml-3">Забронировать</button>
+                    <button id="button-bron" type="button" class="btn btn-primary btn-bron ml-2 col-lg-12">Забронировать</button>
                 </a>
                 <a href="#about-us">
-                    <button type="button" class="btn btn-link btn-about-us">О нас</button>
+                    <button id="button-about-us" type="button" class="btn btn-link btn-about-us">О нас</button>
                 </a>
             </div>
         </div>
@@ -41,16 +40,17 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <img class="rounded" data-u="image" src="img/apartaments.png"/>
-                    <div class="description-room row">
-                        <div class="col-8">
-                            <h5>Аппартаменты с видом на море • от 1500р. за ночь</h5>
+                    <div class="description-room row position-static">
+                        <div class="col-12 col-sm-7 col-lg-8">
+                            <h5>Аппартаменты с видом на море</h5>
                             <p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и
                                 кондиционером</p>
                         </div>
-                        <div class="col-4 prices">
+                        <div class="col-12 col-sm-5 col-lg-4 prices">
                             <div class="row">
                                 <div class="col-6">
-                                    Цена за <b>Июнь:</b> <br>
+                                    Цена за <br>
+                                    <b>Июнь:</b> <br>
                                     Июль: <br>
                                     Август: <br>
                                     Сентябрь: <br>
@@ -58,6 +58,7 @@
                                     Ноябрь:
                                 </div>
                                 <div class="col-6">
+                                    <br>
                                     <b>1500р/ночь</b><br>
                                     800р/ночь<br>
                                     20р/ночь<br>
@@ -68,6 +69,7 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="btn col-12" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -77,47 +79,45 @@
         <h3>Почему у нас <span class="paint">хорошо?</span></h3>
     </div>
     <section class="row mt-5 justify-content-between">
-        <article class="col-3">
+        <article class="col-12 col-lg-3">
             <h6>Дом прямо на берегу моря</h6>
             <p>С первыми лучами солнца вы будете слышать шум волн, ведь именно у нас, пройдя всего двадцать метров от
                 веранды вы уже сможете купаться в чистом море и загорать на солнышке</p>
         </article>
-        <article class="col-3">
+        <article class="col-12 col-lg-3">
             <h6>Уютные комнаты</h6>
             <p>В уютных и просторных комнатах вы будете чувствовать себя как дома. В комнатах можно отдохнуть,
                 посмотреть телевизор, принять освежающий душ или просто наслаждаться на лес или море.</p>
         </article>
-        <article class="col-3">
+        <article class="col-12 col-lg-3">
             <h6>Домашняя атмосфера</h6>
             <p>Здесь написать что-нибудь про комфортную и домашнюю атмосферу с шашлычком. Тут идет дополнительный текст,
                 чтобы этот параграф визульно был похож на остальные два.</p>
         </article>
-        <img class="rounded mx-auto d-block img-fluid mt-5" src="img/bedroom.png" alt="красивый вид на спальню">
-        <article class="col-5 align-self-center">
+        <img class="bedroom-img rounded mx-auto d-block img-fluid mt-5" src="img/bedroom.png" alt="красивый вид на спальню">
+        <article class="col-md-5 col-12 align-self-center order-2 order-md-1">
             <h4>Все <span class="paint">удобства</span> у вас под рукой</h4>
             <p class="text-left pr-5 mt-5">Скоростной WIFI прямо на берегу моря, манаг для сочного шашлыка, зонтики от
                 солнца, пароварка, парковка</p>
         </article>
-        <img class="rounded col-6 mt-5 px-0" src="img/wall.png" alt="гостинная">
+        <img class="rounded col-md-6 col-12 mt-5 px-0 order-1 order-md-2" src="img/wall.png" alt="гостинная">
+
     </section>
     <section class="row mt-5">
         <div id="jssor_1"
-             style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+             style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;visibility:hidden;">
             <!-- Loading Screen -->
             <div data-u="loading" class="jssorl-009-spin"
                  style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                 <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg"/>
             </div>
             <div data-u="slides"
-                 style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+                 style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;">
                 <div data-p="225.00">
-                    <img data-u="image" src="img/001.jpg"/>
+                    <img data-u="image" src="img/1slider.png"/>
                 </div>
                 <div data-p="225.00">
-                    <img data-u="image" src="img/002.jpg"/>
-                </div>
-                <div data-p="225.00">
-                    <img data-u="image" src="img/003.jpg"/>
+                    <img data-u="image" src="img/2slider.png"/>
                 </div>
             </div>
             <!-- Bullet Navigator -->
@@ -145,7 +145,7 @@
         </div>
     </section>
     <section class="row mt-5 justify-content-between">
-        <article class="col-6">
+        <article class="col-md-6 col-12">
             <h3>Как к нам попасть?</h3>
             <p>
                 Удобнее всего добираться до нас на машине или электричке.
@@ -160,11 +160,11 @@
                 <a href="http://krasnodar.elektrichki.net/raspisanie/volkonka/sochi/">расписанием остановок</a>
             </p>
         </article>
-        <div id="map" class="col-5 rounded"></div>
+        <div id="map" class="col-md-5 col-12 rounded"></div>
     </section>
-    <section class="row mt-5">
-        <h3>Уютные комнаты за <span class="paint"> доступную цену</span></h3>
-        <div class="col-12 px-0 mt-5">
+    <section class="row mt-5 room">
+        <h3 class="such-rooms">Уютные комнаты за <span class="paint"> доступную цену</span></h3>
+        <div class="col-12 px-0 mt-5 pisos">
             <div class="rounded" id="jssor_2"
                  style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;visibility:hidden;">
                 <!-- Loading Screen -->
@@ -172,17 +172,17 @@
                      style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                     <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg"/>
                 </div>
-                <div data-u="slides"
+                <div class="room-slides" data-u="slides"
                      style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;">
-                    <div data-p="225.00">
-                        <img class="rounded" data-u="image" src="img/apartaments.png"/>
-                        <div class="description-room">
-                            <button class="all-photos" data-toggle="modal" data-target="#exampleModal">Все фото</button>
-                            <h5>Аппартаменты с видом на море • от 1500р. за ночь</h5>
-                            <p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и
-                                кондиционером</p>
-                        </div>
-                    </div>
+                    <!--<div data-p="225.00">-->
+                        <!--<img class="rounded" data-u="image" src="img/apartaments.png"/>-->
+                        <!--<div class="description-room">-->
+                            <!--<button class="all-photos" data-toggle="modal" data-target="#exampleModal">Все фото</button>-->
+                            <!--<h5>Аппартаменты с видом на море • от 1500р. за ночь</h5>-->
+                            <!--<p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и-->
+                                <!--кондиционером</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <!--<div data-p="225.00">-->
                     <!--<img data-u="image" src="img/002.jpg" />-->
                     <!--</div>-->
@@ -219,14 +219,14 @@
 <footer>
     <div class="container px-0 pt-5">
         <div class="row">
-            <address class="col-8">
+            <address class="col-md-5 col-12">
                 <b>Почта</b><br>
                 elling55@gmail.com <br><br>
                 <b>Телефон</b><br>
                 +7(928)226-88-11
             </address>
-            <aside class="col-4 text-right">
-                Мы на других ресурсах<br><br>
+            <aside class="col-md-7 col-12 text-md-right">
+                 Мы на других ресурсах<br><br>
                 <img src="img/instagram.svg" alt="логотип инстаграма">
                 <img src="img/ug.svg" alt="логотип сервиса юг">
                 <img src="img/booking.svg" alt="логотип букинга">
