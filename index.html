@@ -33,48 +33,7 @@
 </header>
 
 <main class="container">
-    <!-- Modal window -->
-    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img class="rounded" data-u="image" src="img/apartaments.png"/>
-                    <div class="description-room row position-static">
-                        <div class="col-12 col-sm-7 col-lg-8">
-                            <h5>Аппартаменты с видом на море</h5>
-                            <p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и
-                                кондиционером</p>
-                        </div>
-                        <div class="col-12 col-sm-5 col-lg-4 prices">
-                            <div class="row">
-                                <div class="col-6">
-                                    Цена за <br>
-                                    <b>Июнь:</b> <br>
-                                    Июль: <br>
-                                    Август: <br>
-                                    Сентябрь: <br>
-                                    Октябрь: <br>
-                                    Ноябрь:
-                                </div>
-                                <div class="col-6">
-                                    <br>
-                                    <b>1500р/ночь</b><br>
-                                    800р/ночь<br>
-                                    20р/ночь<br>
-                                    1500р/ночь<br>
-                                    1500р/ночь<br>
-                                    1500р/ночь
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn col-12 d-sm-none" data-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal window -->
+
     <div class="row align-items-left mt-5" id="about-us">
         <h3>Почему у нас <span class="paint">хорошо?</span></h3>
     </div>
@@ -180,21 +139,6 @@
                 </div>
                 <div class="room-slides" data-u="slides"
                      style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;">
-                    <!--<div data-p="225.00">-->
-                        <!--<img class="rounded" data-u="image" src="img/apartaments.png"/>-->
-                        <!--<div class="description-room">-->
-                            <!--<button class="all-photos" data-toggle="modal" data-target="#exampleModal">Все фото</button>-->
-                            <!--<h5>Аппартаменты с видом на море • от 1500р. за ночь</h5>-->
-                            <!--<p>Просторный номер с кроватью, душем, телевизором, спутниковым ТВ, холодильником и-->
-                                <!--кондиционером</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div data-p="225.00">-->
-                    <!--<img data-u="image" src="img/002.jpg" />-->
-                    <!--</div>-->
-                    <!--<div data-p="225.00">-->
-                    <!--<img data-u="image" src="img/003.jpg" />-->
-                    <!--</div>-->
                 </div>
                 <!-- Arrow Navigator -->
                 <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;"
@@ -212,14 +156,27 @@
             </div>
         </div>
     </section>
+    <!-- Modal window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <button type="button" class="btn col-12 d-sm-none close-modal" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal window -->
     <section class="row mt-5 submit-form" id="submit-form">
         <h3 class="col-12 px-0">Хотите к <span class="paint">нам?</span></h3>
         <h4 class="mt-3">Оставьте свои данные и мы свяжемся с вами насчет брони в ближайшее время</h4>
-        <form class="col-12 mt-5 px-0" action="" method="post">
+        <div class="col-12 mt-5 px-0" id="submit-info">
             <input class="col-12" type="text" name="user_phone" placeholder="Ваш телефон">
             <input class="col-12 mt-5" type="text" name="user_name" placeholder="Ваше имя">
-            <button class="mt-5" type="submit">Отправить</button>
-        </form>
+            <button class="mt-5 submit-info" type="submit">Отправить</button>
+        </div>
     </section>
 </main>
 <footer>
@@ -233,10 +190,15 @@
             </address>
             <aside class="col-md-7 col-12 text-md-right">
                  Мы на других ресурсах<br><br>
-                <img src="img/instagram.svg" alt="логотип инстаграма">
-                <img src="img/ug.svg" alt="логотип сервиса юг">
-                <img src="img/booking.svg" alt="логотип букинга">
-                <img src="img/airbnb.svg" alt="логотип эирбиэнби">
+                 <a target="_blank" href="https://www.instagram.com/volkonka_beach/">
+                  <img src="img/instagram.svg" alt="логотип инстаграма">
+                 </a>
+                 <a target="_blank" href="http://www.kudanamore.ru/volkonka/hotels/17806/">
+                  <img src="img/kuda.svg"  alt="логотип сервиса куда на море">
+                </a>
+                <a target="_blank" href="https://www.booking.com/hotel/ru/guest-house-elling-poselok-volkonka.ru.html?aid=964694&app_hotel_id=2769375&checkin=2018-06-29&checkout=2018-06-30&from_sn=android&group_adults=1&group_children=0&label=universe_share_android_hoteldetails_hp_noraf-Jb6lOU%401530258177&no_rooms=1&req_adults=1&req_children=0&room1=A">
+                  <img src="img/booking.svg" alt="логотип букинга">
+                </a>
             </aside>
         </div>
     </div>

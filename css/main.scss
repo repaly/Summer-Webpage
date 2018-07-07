@@ -184,6 +184,10 @@ main {
       border-radius: 5px;
       cursor: pointer;
     }
+    .overflow-container {
+      max-height: 110%;
+      overflow: hidden;
+    }
   }
 
   .position-static {

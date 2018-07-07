@@ -122,6 +122,9 @@ main .description-room {
     -moz-border-radius: 5px;
     border-radius: 5px;
     cursor: pointer; }
+  main .description-room .overflow-container {
+    max-height: 110%;
+    overflow: hidden; }
 main .position-static {
   position: static; }
 main .submit-form h4 {
